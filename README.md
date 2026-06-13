@@ -6,6 +6,22 @@ This repository is pre-configured and structured for **instant deployment to Ver
 
 ---
 
+## Screenshots
+
+| Landing Page | Scanning Progress |
+| :---: | :---: |
+| ![Landing Page](screenshots/landing-page.png) | ![Scanning Progress](screenshots/scanning.png) |
+
+| Dashboard Overview | File Analysis & Suggestions |
+| :---: | :---: |
+| ![Dashboard Overview](screenshots/dashboard.png) | ![File Analysis](screenshots/file-analysis.png) |
+
+| AI Refactor Assistant Chat |
+| :---: |
+| ![AI Assistant](screenshots/assistant.png) |
+
+---
+
 ## Restructured Layout
 
 - `/src` & `/public`: React components, styles, and assets (moved to project root).
