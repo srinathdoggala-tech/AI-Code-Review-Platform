@@ -489,7 +489,6 @@ export default function App() {
         <div className="logo-container" onClick={() => setView('landing')} style={{ cursor: 'pointer' }}>
           <Terminal className="logo-icon" size={24} />
           <span className="logo-text">ReviewGPT</span>
-          <span className="logo-badge">Beta</span>
         </div>
         
         {view !== 'landing' && (
