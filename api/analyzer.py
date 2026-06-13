@@ -112,7 +112,7 @@ Here is the code to analyze:
         try:
             # Check model name and initialize
             # Use gemini-1.5-flash for speed and reliability, supports JSON outputs
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             
             response = await model.generate_content_async(
                 prompt,
@@ -177,7 +177,7 @@ Code:
         context_prompt += f"Developer Question:\n{question}\n\nProvide a clear, expert explanation and any code suggestions needed."
 
         try:
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             response = await model.generate_content_async(context_prompt)
             return response.text
         except Exception as e:
