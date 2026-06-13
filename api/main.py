@@ -6,8 +6,12 @@ from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, HttpUrl
 
-from github_client import GitHubClient
-from analyzer import CodeAnalyzer
+try:
+    from .github_client import GitHubClient
+    from .analyzer import CodeAnalyzer
+except ImportError:
+    from github_client import GitHubClient
+    from analyzer import CodeAnalyzer
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
