@@ -96,6 +96,14 @@ Receive AI-generated explanations and improvement suggestions.
 
 ## Bug Detection
 
+https://github.com/user-attachments/assets/97787294-b1b8-4558-92a3-0aa4deba1456
+
+
+
+https://github.com/user-attachments/assets/f73600cb-98f9-44a6-970e-fda88e19baba
+
+
+
 Detect:
 
 * Logical errors
