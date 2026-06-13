@@ -35,7 +35,7 @@ https://ai-code-review-platform-tbdp.vercel.app
 
 Here is a short video walkthrough demonstrating the application scan flow, metrics dashboard, and AI chatbot assistant:
 
-![Application Demo Video](screenshots/demo.mp4)
+<video src="screenshots/demo.mp4" width="100%" controls></video>
 
 ---
 
