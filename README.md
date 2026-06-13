@@ -39,7 +39,7 @@ https://ai-code-review-platform-tbdp.vercel.app
 
 Upload your repository and start scanning instantly.
 
-![Landing Page](screenshots/landing-page.png)
+![Landing Page]("C:\Users\dogga\OneDrive\Pictures\Screenshots\Screenshot 2026-06-13 142001.png")
 
 ---
 
