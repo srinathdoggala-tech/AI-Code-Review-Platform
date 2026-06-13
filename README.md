@@ -1,94 +1,425 @@
-# ReviewGPT: AI Code Review Platform (Vercel-Ready)
+# 🚀 ReviewGPT – AI-Powered Code Review Platform
 
-ReviewGPT is a premium AI-powered code review dashboard utilizing **FastAPI**, **React (Vite)**, the **GitHub API**, and the **Gemini API**. It helps developers, students, and reviewers scan public/private repos, calculate cyclomatic complexity, audit security vulnerabilities, and get refactoring code diffs.
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Gemini%202.5%20Flash-blue" />
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB" />
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688" />
+  <img src="https://img.shields.io/badge/Deployment-Vercel-black" />
+  <img src="https://img.shields.io/badge/Status-Live-success" />
+</p>
 
-This repository is pre-configured and structured for **instant deployment to Vercel** using **Vercel Serverless Functions (Python)** and static frontend hosting.
+## 🌟 Overview
 
----
+ReviewGPT is an AI-powered GitHub repository analysis platform that performs automated code reviews using static analysis and Large Language Models.
 
-## Screenshots
+The platform helps developers identify:
 
-| Landing Page | Scanning Progress |
-| :---: | :---: |
-| ![Landing Page](screenshots/landing-page.png) | ![Scanning Progress](screenshots/scanning.png) |
+* 🐞 Bugs
+* 🔒 Security Vulnerabilities
+* ⚡ Performance Issues
+* 📊 Cyclomatic Complexity
+* 🧹 Code Quality Problems
+* 🤖 AI-Powered Refactoring Suggestions
 
-| Dashboard Overview | File Analysis & Suggestions |
-| :---: | :---: |
-| ![Dashboard Overview](screenshots/dashboard.png) | ![File Analysis](screenshots/file-analysis.png) |
-
-| AI Refactor Assistant Chat |
-| :---: |
-| ![AI Assistant](screenshots/assistant.png) |
-
----
-
-## Restructured Layout
-
-- `/src` & `/public`: React components, styles, and assets (moved to project root).
-- `/api`: FastAPI backend files, including serverless routes (`main.py`), complexity checkers (`analyzer.py`), and the Vercel entrypoint (`index.py`).
-- `vercel.json`: Handles rewrites mapping `/api/*` endpoints to the serverless function `/api/index.py`.
+ReviewGPT combines GitHub repository analysis, FastAPI backend services, Gemini AI, and an interactive dashboard to provide actionable insights before code reaches production.
 
 ---
 
-## Vercel Deployment Guide
+# 🌐 Live Demo
 
-Deploying ReviewGPT on Vercel takes just a few clicks:
+### 🔗 Live Application
 
-1. **Import Repository**: Log in to Vercel, click **Add New** > **Project**, and import your `AI-Code-Review-Platform` repository.
-2. **Environment Variables**: In the Vercel project configuration, add your default Gemini API key as an environment variable (optional, as users can also input it on the landing page):
-   - Key: `GEMINI_API_KEY`
-   - Value: `YOUR_GEMINI_API_KEY`
-3. **Deploy**: Click **Deploy**. Vercel will automatically:
-   - Identify the React application at the root and build it using `npm run build`.
-   - Identify the `/api` folder, install Python dependencies from `/api/requirements.txt`, and compile the Python serverless functions.
-   - Serve your frontend and route `/api/*` requests seamlessly!
+https://ai-code-review-platform-tbdp.vercel.app
 
 ---
 
-## Local Development Setup
+# 📸 Screenshots
 
-You can still run and develop this project locally on your machine:
+## Landing Page
 
-### 1. Run the FastAPI Backend
+Upload your repository and start scanning instantly.
 
-Navigate to the `api/` directory:
+![Landing Page](screenshots/landing-page.png)
+
+---
+
+## Repository Scanning
+
+ReviewGPT analyzes repository structure and source code files.
+
+![Scanning](screenshots/scanning.png)
+
+---
+
+## Code Health Dashboard
+
+View overall repository quality and issue distribution.
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## File Analysis
+
+Analyze complexity scores and health metrics for individual files.
+
+![File Analysis](screenshots/file-analysis.png)
+
+---
+
+## AI Refactor Assistant
+
+Receive AI-generated explanations and improvement suggestions.
+
+![AI Assistant](screenshots/assistant.png)
+
+---
+
+# ✨ Features
+
+## Repository Analysis
+
+* Scan public GitHub repositories
+* Repository structure analysis
+* Branch-specific scanning
+* GitHub API integration
+
+## Bug Detection
+
+Detect:
+
+* Logical errors
+* Boundary condition issues
+* Runtime risks
+* Poor coding practices
+
+## Security Audits
+
+Identify:
+
+* Hardcoded credentials
+* Sensitive information exposure
+* SQL injection patterns
+* XSS vulnerabilities
+* Unsafe API usage
+
+## Performance Analysis
+
+Evaluate:
+
+* Cyclomatic complexity
+* Function complexity
+* Performance bottlenecks
+* Scalability concerns
+
+## Code Quality Checks
+
+Review:
+
+* Maintainability
+* Readability
+* Architecture quality
+* Coding standards
+
+## AI Refactor Assistant
+
+Powered by Gemini AI:
+
+* Code explanations
+* Refactoring recommendations
+* Architecture improvements
+* Best practice suggestions
+
+---
+
+# 🏗 Architecture
+
+```text
+GitHub Repository
+        │
+        ▼
+Repository Scanner
+        │
+        ▼
+Static Code Analyzer
+        │
+        ├──────────► Bug Detection
+        │
+        ├──────────► Security Audit
+        │
+        ├──────────► Complexity Analysis
+        │
+        ▼
+Gemini AI Engine
+        │
+        ▼
+AI Refactor Assistant
+        │
+        ▼
+ReviewGPT Dashboard
+```
+
+# 🛠 Tech Stack
+
+## Frontend
+
+* React
+* Vite
+* Tailwind CSS
+* JavaScript
+
+## Backend
+
+* FastAPI
+* Python
+
+## AI
+
+* Google Gemini 2.5 Flash
+
+## APIs
+
+* GitHub REST API
+
+## Deployment
+
+* Vercel
+
+---
+
+# 📂 Project Structure
+
 ```bash
-cd api
+AI-Code-Review-Platform/
+│
+├── api/
+│   ├── analyzer.py
+│   ├── github_client.py
+│   ├── index.py
+│   └── main.py
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── utils/
+│
+├── package.json
+├── vite.config.js
+├── vercel.json
+└── README.md
 ```
 
-Set up a virtual environment and install backend requirements:
-*Windows (PowerShell):*
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-*macOS / Linux:*
+# 🚀 Local Development
+
+## Clone Repository
+
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+git clone https://github.com/srinathdoggala-tech/AI-Code-Review-Platform.git
+
+cd AI-Code-Review-Platform
 ```
 
-Launch the FastAPI dev server (from inside the `api/` folder):
-```bash
-uvicorn main:app --reload --host 127.0.0.1 --port 8000
-```
-*The backend will run on `http://127.0.0.1:8000`.*
+## Install Frontend Dependencies
 
----
-
-### 2. Run the React Frontend
-
-Open a new terminal at the **project root** directory:
-
-Install npm packages:
 ```bash
 npm install
 ```
 
-Start the Vite development server:
+## Start Frontend
+
 ```bash
 npm run dev
 ```
-*The frontend will run on `http://localhost:5173`. Open this URL in your browser to start scanning!*
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+## Backend Setup
+
+Navigate to API folder:
+
+```bash
+cd api
+```
+
+Create virtual environment:
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# ⚙ Environment Variables
+
+Create a `.env` file inside the api directory.
+
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+---
+
+# 🚀 Deployment
+
+## Vercel Deployment
+
+1. Fork or clone this repository
+2. Login to Vercel
+3. Import Project
+4. Add environment variable:
+
+```env
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+5. Click Deploy
+
+Vercel automatically:
+
+* Builds React frontend
+* Deploys FastAPI serverless functions
+* Configures API routing
+
+---
+
+# 📈 Example Analysis Output
+
+ReviewGPT provides:
+
+* Repository Health Score
+* Bug Count
+* Security Findings
+* Performance Metrics
+* Complexity Analysis
+* AI Refactoring Suggestions
+
+Example:
+
+```text
+Health Score: 85/100
+
+Bugs Found: 7
+
+Security Issues: 1
+
+Performance Issues: 3
+
+Code Quality Findings: 15
+```
+
+---
+
+# 🎯 Use Cases
+
+### Developers
+
+Review code before deployment.
+
+### Students
+
+Learn best coding practices.
+
+### Open Source Contributors
+
+Understand unfamiliar repositories quickly.
+
+### Startup Teams
+
+Improve code quality and maintainability.
+
+### Technical Interview Preparation
+
+Analyze projects and identify improvements.
+
+---
+
+# 🔮 Future Roadmap
+
+* GitHub OAuth Authentication
+* Pull Request Analysis
+* Commit-Level Review
+* Multi-Repository Dashboards
+* PDF Report Export
+* Team Collaboration Features
+* CI/CD Integration
+* GitHub Actions Support
+* Slack Notifications
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+```bash
+Fork Repository
+
+Create Feature Branch
+
+Commit Changes
+
+Push Branch
+
+Open Pull Request
+```
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+### Srinath Doggala
+
+Computer Science Engineering (AI/ML)
+
+GitHub:
+https://github.com/srinathdoggala-tech
+
+Project:
+https://ai-code-review-platform-tbdp.vercel.app
+
+---
+
+⭐ If you found this project useful, consider starring the repository.
