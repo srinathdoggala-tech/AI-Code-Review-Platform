@@ -31,6 +31,12 @@ ReviewGPT combines GitHub repository analysis, FastAPI backend services, Gemini 
 
 https://ai-code-review-platform-tbdp.vercel.app
 
+### 🎥 Application Demo Video
+
+Here is a short video walkthrough demonstrating the application scan flow, metrics dashboard, and AI chatbot assistant:
+
+![Application Demo Video](screenshots/demo.mp4)
+
 ---
 
 # 📸 Screenshots
