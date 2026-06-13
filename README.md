@@ -24,9 +24,6 @@ The platform helps developers identify:
 ReviewGPT combines GitHub repository analysis, FastAPI backend services, Gemini AI, and an interactive dashboard to provide actionable insights before code reaches production.
 
 ---
-
-# 🌐 Live Demo
-
 ### 🔗 Live Application
 
 https://ai-code-review-platform-tbdp.vercel.app
@@ -34,6 +31,10 @@ https://ai-code-review-platform-tbdp.vercel.app
 ### 🔗 Github repository
 
 https://github.com/srinathdoggala-tech/AI-Code-Review-Platform
+
+# 🌐 Live Demo
+
+https://github.com/user-attachments/assets/f73600cb-98f9-44a6-970e-fda88e19baba
 
 ---
 
@@ -89,17 +90,7 @@ Receive AI-generated explanations and improvement suggestions.
 * GitHub API integration
 
 ## Bug Detection
-
-https://github.com/user-attachments/assets/97787294-b1b8-4558-92a3-0aa4deba1456
-
-
-
-https://github.com/user-attachments/assets/f73600cb-98f9-44a6-970e-fda88e19baba
-
-
-
 Detect:
-
 * Logical errors
 * Boundary condition issues
 * Runtime risks
