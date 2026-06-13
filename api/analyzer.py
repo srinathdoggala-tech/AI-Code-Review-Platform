@@ -139,10 +139,21 @@ Here is the code to analyze:
             # Fallback response in case of error
             return {
                 "file_path": filepath,
-                "score": 100,
+                "score": 0,
                 "summary": f"Could not complete AI review for this file due to error: {str(e)}",
                 "complexity_score": local_complexity or 1,
-                "issues": [],
+                "issues": [
+                    {
+                        "type": "security",
+                        "severity": "high",
+                        "line": 1,
+                        "title": "AI Review Failed",
+                        "description": f"The Gemini API call failed for this file: {str(e)}",
+                        "suggestion": "Please check your Gemini API key, network connection, or API quota. Ensure you provided a valid key in the setup form or server environment variable.",
+                        "original_code": "",
+                        "suggested_code": ""
+                    }
+                ],
                 "architecture_notes": "Analysis failed."
             }
 
